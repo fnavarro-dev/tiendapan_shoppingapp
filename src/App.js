@@ -1,9 +1,9 @@
-import { ActivityIndicator, View, StyleSheet } from 'react-native';
 import { useFonts } from 'expo-font';
-import { Categories, Product, Products } from './screens';
+import { ActivityIndicator, StyleSheet, View } from 'react-native';
+import { Provider } from 'react-redux';
+
 import AppNavigator from './navigation';
-
-
+import store from './store';
 export default function App() {
   const [loaded] = useFonts({
     'Lato-Regular': require('../assets/fonts/Lato-Regular.ttf'),
@@ -20,12 +20,11 @@ export default function App() {
       </View>
     );
   }
-  
-  
   return (
-    <AppNavigator />
-  )
-  
+    <Provider store={store}>
+      <AppNavigator />
+    </Provider>
+  );
 }
 
 const styles = StyleSheet.create({

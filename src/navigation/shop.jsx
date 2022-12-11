@@ -2,61 +2,47 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 
 import { COLORS } from '../constants/themes/colors';
+import { Categories, Product, Products } from '../screens';
 import { isIOS } from '../utils';
-
-import { Categories, Products, Product } from '../screens';
-
 
 const Stack = createNativeStackNavigator();
 
-
-//<Stack Navigator es un contendor que adentro tiene vistas
 const ShopNavigator = () => {
-  //AGREGANDO ANIMACION
-  const config = {
-    animation: 'spring',
-    config: {
-      stiffness:1000,
-      damping: 500,
-      mass: 3,
-      overshootClamping: true,
-      
-    }
-  }
-  
-  
   return (
-    <Stack.Navigator 
-      initialRouteName="Categorias"
+    <Stack.Navigator
+      initialRouteName="Categories"
       screenOptions={{
-        headerTitleAlign: 'center',
-        headerTintColor: isIOS ? COLORS.black : COLORS.white,
         headerStyle: {
-          backgroundColor: isIOS ? COLORS.backgroundLight : COLORS.backgroundDark,
+          backgroundColor: isIOS ? COLORS.backgroundDark : COLORS.backgroundLight,
         },
+        headerTintColor: COLORS.text,
         headerTitleStyle: {
           fontFamily: 'Lato-Bold',
-          presentation: 'card',
+        },
+        presentation: 'card',
         headerBackTitle: '',
-      },
-
-      }}
-     >
+      }}>
       <Stack.Screen
-        name="Categorias"
+        name="Categories"
         component={Categories}
         options={{
-          headerShown: false, //asi se oculta cabezera
+          headerShown: false,
         }}
-    />
+      />
       <Stack.Screen
-        name="Productos"
+        name="Products"
         component={Products}
-     />
+        options={({ route }) => ({
+          title: route.params.title,
+        })}
+      />
       <Stack.Screen
-        name="Producto"
+        name="Product"
         component={Product}
-     />
+        options={({ route }) => ({
+          title: route.params.title,
+        })}
+      />
     </Stack.Navigator>
   );
 };
