@@ -13,16 +13,16 @@ const OrderNavigator = () => {
       initialRouteName="Orders"
       screenOptions={{
         headerStyle: {
-          backgroundColor: isIOS ? COLORS.backgroundDark : COLORS.backgroundLight,
+          backgroundColor: isIOS ? COLORS.backgroundLight : COLORS.backgroundDark,
         },
-        headerTintColor: COLORS.text,
+        headerTintColor: isIOS ? COLORS.text : COLORS.white,
         headerTitleStyle: {
           fontFamily: 'Lato-Bold',
         },
         presentation: 'card',
         headerBackTitle: '',
       }}>
-      <Stack.Screen name="Orders" component={Orders} />
+      <Stack.Screen name="Ordenes" component={Orders} />
     </Stack.Navigator>
   );
 };

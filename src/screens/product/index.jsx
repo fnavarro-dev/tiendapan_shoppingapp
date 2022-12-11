@@ -20,7 +20,7 @@ const Product = ({ navigation }) => {
       <Text style={styles.description}>{description}</Text>
       <Text style={styles.weight}>{weight}</Text>
       <Text style={styles.price}>${price}</Text>
-      <Button title="Add to cart" onPress={onAddToCart} color={COLORS.primaryDark} />
+      <Button title="Añadir al carrito" onPress={onAddToCart} color={COLORS.primaryDark} />
     </View>
   );
 };

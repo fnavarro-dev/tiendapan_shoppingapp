@@ -34,7 +34,7 @@ const Cart = ({ navigation }) => {
           disabled={cart.length === 0}
           style={cart.length === 0 ? styles.buttonDisabledConfirm : styles.buttonConfirm}
           onPress={onCreateOrder}>
-          <Text style={styles.textButtonConfirm}>Confirm</Text>
+          <Text style={styles.textButtonConfirm}>Confirmar</Text>
           <View style={styles.totalContainer}>
             <Text style={styles.textTotalTitle}>Total</Text>
             <Text style={styles.textTotal}>${total}</Text>

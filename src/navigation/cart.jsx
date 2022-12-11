@@ -13,16 +13,16 @@ const CartNavigator = () => {
       initialRouteName="Cart"
       screenOptions={{
         headerStyle: {
-          backgroundColor: isIOS ? COLORS.backgroundDark : COLORS.backgroundLight,
+          backgroundColor: isIOS ? COLORS.backgroundLight : COLORS.backgroundDark,
         },
-        headerTintColor: COLORS.text,
+        headerTintColor: isIOS ? COLORS.text : COLORS.white,
         headerTitleStyle: {
           fontFamily: 'Lato-Bold',
         },
         presentation: 'card',
         headerBackTitle: '',
       }}>
-      <Stack.Screen name="Cart" component={Cart} />
+      <Stack.Screen name="Carrito de compras" component={Cart} />
     </Stack.Navigator>
   );
 };

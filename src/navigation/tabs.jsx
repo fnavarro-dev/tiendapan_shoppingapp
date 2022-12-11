@@ -29,7 +29,7 @@ const Tabs = () => {
         name="ShopTab"
         component={ShopNavigator}
         options={{
-          title: 'Shop',
+          title: 'Tienda',
           tabBarIcon: ({ focused }) => (
             <Ionicons
               name={focused ? 'home' : 'home-outline'}
@@ -43,7 +43,7 @@ const Tabs = () => {
         name="CartTab"
         component={CartNavigator}
         options={{
-          title: 'Cart',
+          title: 'Carrito',
           tabBarIcon: ({ focused }) => (
             <Ionicons
               name={focused ? 'cart' : 'cart-outline'}
@@ -64,7 +64,7 @@ const Tabs = () => {
         name="OrdersTab"
         component={OrderNavigator}
         options={{
-          title: 'Orders',
+          title: 'Ordenes',
           tabBarIcon: ({ focused }) => (
             <Ionicons
               name={focused ? 'file-tray' : 'file-tray-outline'}

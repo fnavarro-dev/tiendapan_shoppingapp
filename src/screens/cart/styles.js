@@ -39,6 +39,7 @@ export const styles = StyleSheet.create({
     marginVertical: 5,
   },
   textButtonConfirm: {
+    color: 'white',
     fontSize: 14,
     fontFamily: 'Lato-Regular',
   },
@@ -49,10 +50,12 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   textTotalTitle: {
+    color: 'white',
     fontSize: 14,
     fontFamily: 'Lato-Regular',
   },
   textTotal: {
+    color: 'white',
     fontSize: 16,
     fontFamily: 'Lato-Bold',
   },
